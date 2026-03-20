@@ -85,16 +85,21 @@ Exemplo 1: Visualização limpa
 Imagine que você quer extrair o YAML de um deployment para entender como ele foi feito. Em vez de trazer dezenas de linhas de metadados inúteis, use:
 
 ```Bash
-kubectl get deployment meu-app -n minha-namespace -o yaml | kubectl neat
+kubectl get deployment shrek-deployment -n pantano -o yaml | kubectl neat
 ```
 
 Exemplo 2: Exportando para arquivo
 Se quiser salvar um ConfigMap limpo, pronto para ser commitado ou aplicado em outro cluster:
 
 ```Bash
-kubectl get configmap meu-config -o yaml | kubectl neat > config-limpo.yaml
+kubectl get deployment shrek-deployment -n pantano -o yaml | kubectl neat > shrek-deployment-limpo.yaml
 ```
 O resultado será um YAML enxuto, sem managedFields, uid, resourceVersion ou status.
+
+## Veja o resultado nos arquivos do repositório
+O arquivo shrek-deployment-without-neat.yaml é a extração de um YAML sem o uso do Kubectl neat. Com ele vem diversas sujeiras que não serão utilizados.
+
+O arquivo shrek-deployment-with-neat.yaml é a extração de um YAML com o uso do Kubectl neat. Com ele vem somente o necessário para criar um novo deployment ou qualquer objeto no Kubernetes.
 
 ## Troubleshooting
 Erro: unknown command "krew" for "kubectl"
