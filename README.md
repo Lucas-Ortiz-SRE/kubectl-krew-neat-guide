@@ -6,18 +6,6 @@ Se você trabalha com Kubernetes, sabe que rodar um `kubectl get pod <nome> -o y
 
 ---
 
-## Índice
-
-- [Pré-requisitos](#-pré-requisitos)
-- [Passo 1: Instalando o Krew](#-passo-1-instalando-o-krew)
-- [Passo 2: Configurando o PATH](#-passo-2-configurando-o-path)
-- [Passo 3: Instalando o Neat](#-passo-3-instalando-o-neat)
-- [Como usar o Neat na prática](#-como-usar-o-neat-na-prática)
-- [Troubleshooting](#-troubleshooting)
-- [Contribuindo](#-contribuindo)
-
----
-
 ## Pré-requisitos
 
 Antes de começar, certifique-se de ter instalado em sua máquina:
